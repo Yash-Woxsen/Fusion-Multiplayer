@@ -170,8 +170,8 @@ MonoBehaviour:
   AutoClients: 1
   ClientStartDelay: 0.1
   ServerPort: 0
-  DefaultRoomName: 
-  InitialScenePath: 
+  DefaultRoomName: AIRC
+  InitialScenePath: Assets/Scenes/MultiPlayer Shared.unity
   _currentStage: 0
   AutoConnectVirtualInstances: 1
   VirtualInstanceConnectDelay: 1

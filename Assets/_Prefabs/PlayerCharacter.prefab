@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6514036135452147029}
   - component: {fileID: -6608056537914737808}
   - component: {fileID: -3148580877618408333}
+  - component: {fileID: -3009276952755399315}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -111,6 +112,7 @@ MonoBehaviour:
   - {fileID: 6514036135452147029}
   - {fileID: -6608056537914737808}
   - {fileID: -3148580877618408333}
+  - {fileID: -3009276952755399315}
 --- !u!143 &3881032301948664455
 CharacterController:
   m_ObjectHideFlags: 0
@@ -167,7 +169,6 @@ MonoBehaviour:
   PlayerSpeed: 2
   JumpForce: 5
   GravityValue: -9.81
-  Camera: {fileID: 0}
 --- !u!114 &-3148580877618408333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,3 +183,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MeshRenderer: {fileID: 2796210445428715355}
   _NetworkedColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &-3009276952755399315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116730740711963564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538e8fad823561849bd9bacf7ebe2877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshFilter: {fileID: 6248698195485109447}
+  meshes:
+  - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
