@@ -19,4 +19,8 @@ public class PlayerColor : NetworkBehaviour
     {
         MeshRenderer.material.color = NetworkedColor;
     }
+    public override void Spawned()
+    {
+        MeshRenderer.material.color = NetworkedColor;
+    }
 }
