@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 3638995812163756304}
   - component: {fileID: 5231941059259432089}
   - component: {fileID: 5925484393758623967}
+  - component: {fileID: 4677937802669503327}
   m_Layer: 0
   m_Name: Default Avatar
   m_TagString: Untagged
@@ -250,6 +251,7 @@ MonoBehaviour:
   - {fileID: 5761940307647496836}
   - {fileID: 3638995812163756304}
   - {fileID: 5231941059259432089}
+  - {fileID: 4677937802669503327}
 --- !u!143 &2253317808305043047
 CharacterController:
   m_ObjectHideFlags: 0
@@ -351,6 +353,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4677937802669503327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316039288044848629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84486012d4a654a47a76b3026d437a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 5925484393758623967}
+  _controller: {fileID: 2253317808305043047}
 --- !u!1 &1488476990689443671
 GameObject:
   m_ObjectHideFlags: 0
