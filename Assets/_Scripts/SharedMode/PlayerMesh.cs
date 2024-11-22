@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class PlayerMesh : NetworkBehaviour
 {
-    public MeshFilter meshFilter;
-    public MeshRenderer meshRenderer;
+    public SkinnedMeshRenderer skinnedMeshRenderer;
 
     [Networked, OnChangedRender(nameof(MeshChange))]
     private int _meshInt{ get; set;}
@@ -21,12 +20,12 @@ public class PlayerMesh : NetworkBehaviour
     }
     void MeshChange()
     {
-        meshFilter.mesh = meshes[_meshInt];
-        meshRenderer.material = materials[_meshInt];
+        skinnedMeshRenderer.sharedMesh = meshes[_meshInt];
+        skinnedMeshRenderer.material = materials[_meshInt];
     }
     public override void Spawned()
     {
-        meshFilter.mesh = meshes[_meshInt];
-        meshRenderer.material = materials[_meshInt];
+        skinnedMeshRenderer.sharedMesh = meshes[_meshInt];
+        skinnedMeshRenderer.material = materials[_meshInt];
     }
 }
