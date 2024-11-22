@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 5231941059259432089}
   - component: {fileID: 5925484393758623967}
   - component: {fileID: 4677937802669503327}
-  - component: {fileID: 7735418566929165686}
+  - component: {fileID: 1237400610517967214}
   m_Layer: 0
   m_Name: Default Avatar
   m_TagString: Untagged
@@ -253,7 +253,7 @@ MonoBehaviour:
   - {fileID: 3638995812163756304}
   - {fileID: 5231941059259432089}
   - {fileID: 4677937802669503327}
-  - {fileID: 7735418566929165686}
+  - {fileID: 1237400610517967214}
 --- !u!143 &2253317808305043047
 CharacterController:
   m_ObjectHideFlags: 0
@@ -370,7 +370,7 @@ MonoBehaviour:
   animator: {fileID: 5925484393758623967}
   moveSpeedDebug: 0
   _controller: {fileID: 2253317808305043047}
---- !u!114 &7735418566929165686
+--- !u!114 &1237400610517967214
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

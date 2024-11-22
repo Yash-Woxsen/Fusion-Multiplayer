@@ -10,31 +10,24 @@ public class PlayerMeshChanger : NetworkBehaviour
     public AvatarSelector avatarSelector;
     public Mesh[] meshes;
     public Material[] materials;
-    // void ChangeMesh()
-    // {
-    //     if (HasStateAuthority)
-    //     {
-    //         // Changing the material color here directly does not work since this code is only executed on the client pressing the button and not on every client.
-    //         _meshInt = Random.Range(0, meshes.Length);
-    //     }
-    // }
     void MeshChange()
     {
-        if(HasStateAuthority)
-        {
-            _meshInt = avatarSelector.SelectedAvatar;
-            skinnedMeshRenderer.sharedMesh = meshes[_meshInt];
-            skinnedMeshRenderer.material = materials[_meshInt];
-        }
+        skinnedMeshRenderer.sharedMesh = meshes[_meshInt];
+        skinnedMeshRenderer.material = materials[_meshInt];
     }
     public override void Spawned()
     {
-        avatarSelector = FindFirstObjectByType<Canvas>().GetComponent<AvatarSelector>();
-        _meshInt = avatarSelector.SelectedAvatar;
+        //_meshInt = avatarSelector.SelectedAvatar;
         skinnedMeshRenderer.sharedMesh = meshes[_meshInt];
         skinnedMeshRenderer.material = materials[_meshInt];
-
-        avatarSelector.OnAvatarChanged += MeshChange;
+        avatarSelector = FindFirstObjectByType<Canvas>().GetComponent<AvatarSelector>();
+        if(HasStateAuthority)
+        {
+            avatarSelector.OnAvatarChanged += Middleware;
+        }
     }
-
+    public void Middleware()
+    {
+        _meshInt = avatarSelector.SelectedAvatar;
+    }
 }
