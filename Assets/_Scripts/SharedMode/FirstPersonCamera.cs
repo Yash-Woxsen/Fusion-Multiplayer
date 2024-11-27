@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FirstPersonCamera : MonoBehaviour
 {
-    public Transform Target;
+    public Transform target;
     public float MouseSensitivity = 10f;
 
     private float verticalRotation;
@@ -10,12 +10,12 @@ public class FirstPersonCamera : MonoBehaviour
 
     void LateUpdate()
     {
-        if (Target == null)
+        if (target == null)
         {
             return;
         }
 
-        transform.position = Target.position;
+        transform.position = target.position;
 
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");

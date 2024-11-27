@@ -24,8 +24,13 @@ public class PlayerMovement : NetworkBehaviour
         {
             _jumpPressed = true;
         }
+        if(Input.GetKeyDown(KeyCode.H))
+        {
+            Cursor.lockState = !Cursor.visible ? CursorLockMode.None : CursorLockMode.Locked;
+        }
     }
 
+    public Vector3 dir;
     public override void FixedUpdateNetwork()
     {
         // FixedUpdateNetwork is only executed on the StateAuthority
@@ -38,14 +43,14 @@ public class PlayerMovement : NetworkBehaviour
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * Runner.DeltaTime * PlayerSpeed;
         // Quaternion cameraRotationY = Quaternion.Euler(0, Camera.transform.rotation.eulerAngles.y, 0);
         // Vector3 move = cameraRotationY * new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * Runner.DeltaTime * PlayerSpeed;
-        
 
+        
         _velocity.y += GravityValue * Runner.DeltaTime;
         if (_jumpPressed && _controller.isGrounded)
         {
             _velocity.y += JumpForce;
         }
-        _controller.Move(move + _velocity * Runner.DeltaTime);
+        _controller.Move(move + dir + _velocity * Runner.DeltaTime);
 
         if (move != Vector3.zero)
         {
@@ -54,14 +59,4 @@ public class PlayerMovement : NetworkBehaviour
 
         _jumpPressed = false;
     }
-
-    // public Camera Camera;
-    // public override void Spawned()
-    // {
-    //     if (HasStateAuthority)
-    //     {
-    //         Camera = Camera.main;
-    //         Camera.GetComponent<FirstPersonCamera>().Target = transform;
-    //     }
-    // }
 }
