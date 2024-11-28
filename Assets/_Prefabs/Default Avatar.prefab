@@ -235,12 +235,10 @@ GameObject:
   - component: {fileID: 2253317808305043047}
   - component: {fileID: 5761940307647496836}
   - component: {fileID: 3638995812163756304}
-  - component: {fileID: 5231941059259432089}
   - component: {fileID: 5925484393758623967}
   - component: {fileID: 4677937802669503327}
   - component: {fileID: 1237400610517967214}
   - component: {fileID: 1795097834726733531}
-  - component: {fileID: 1677122413964388309}
   m_Layer: 0
   m_Name: Default Avatar
   m_TagString: Untagged
@@ -286,11 +284,9 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 5761940307647496836}
   - {fileID: 3638995812163756304}
-  - {fileID: 5231941059259432089}
   - {fileID: 4677937802669503327}
   - {fileID: 1237400610517967214}
   - {fileID: 1795097834726733531}
-  - {fileID: 1677122413964388309}
 --- !u!143 &2253317808305043047
 CharacterController:
   m_ObjectHideFlags: 0
@@ -339,7 +335,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316039288044848629}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecdf292530dc4564a9be22c9ae99af01, type: 3}
   m_Name: 
@@ -347,29 +343,6 @@ MonoBehaviour:
   PlayerSpeed: 2
   JumpForce: 5
   GravityValue: -9.81
---- !u!114 &5231941059259432089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316039288044848629}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 538e8fad823561849bd9bacf7ebe2877, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skinnedMeshRenderer: {fileID: 7906844576323268240}
-  meshes:
-  - {fileID: 5857436389607498443, guid: cf6da3e245d097343a1742732cff297b, type: 3}
-  - {fileID: 5857436389607498443, guid: 39c3dbf76fe90d34d82911db156b4d1f, type: 3}
-  - {fileID: 5857436389607498443, guid: ce129a3f2aeabbf4f97b7eb6965453a1, type: 3}
-  - {fileID: 5857436389607498443, guid: 50d81a646ac7bbc4391853f3de8ad091, type: 3}
-  materials:
-  - {fileID: -2110216206232194035, guid: cf6da3e245d097343a1742732cff297b, type: 3}
-  - {fileID: -2110216206232194035, guid: 39c3dbf76fe90d34d82911db156b4d1f, type: 3}
-  - {fileID: -2110216206232194035, guid: ce129a3f2aeabbf4f97b7eb6965453a1, type: 3}
-  - {fileID: -2110216206232194035, guid: 50d81a646ac7bbc4391853f3de8ad091, type: 3}
 --- !u!95 &5925484393758623967
 Animator:
   serializedVersion: 7
@@ -445,29 +418,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPivot: {fileID: 5672091707319136832}
   cameraHandle: {fileID: 6976895126089177728}
---- !u!114 &1677122413964388309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316039288044848629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c26c5cd9e5864ba45a92199001795cbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 2253317808305043047}
-  cam: {fileID: 0}
-  speed: 6
-  turnSmoothTime: 0.1
-  gravity: -9.81
-  jumpHeight: 3
-  groundCheck: {fileID: 827536345486228611}
-  groundDistance: 0.4
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &1488476990689443671
 GameObject:
   m_ObjectHideFlags: 0
