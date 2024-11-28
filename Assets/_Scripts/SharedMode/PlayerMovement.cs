@@ -30,7 +30,6 @@ public class PlayerMovement : NetworkBehaviour
         }
     }
 
-    public Vector3 dir;
     public override void FixedUpdateNetwork()
     {
         // FixedUpdateNetwork is only executed on the StateAuthority
@@ -41,16 +40,15 @@ public class PlayerMovement : NetworkBehaviour
         }
 
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * Runner.DeltaTime * PlayerSpeed;
-        // Quaternion cameraRotationY = Quaternion.Euler(0, Camera.transform.rotation.eulerAngles.y, 0);
-        // Vector3 move = cameraRotationY * new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * Runner.DeltaTime * PlayerSpeed;
-
         
         _velocity.y += GravityValue * Runner.DeltaTime;
         if (_jumpPressed && _controller.isGrounded)
         {
             _velocity.y += JumpForce;
         }
-        _controller.Move(move + dir + _velocity * Runner.DeltaTime);
+
+        Vector3 moveDirection = move + _velocity * Runner.DeltaTime;
+        _controller.Move(moveDirection );
 
         if (move != Vector3.zero)
         {
