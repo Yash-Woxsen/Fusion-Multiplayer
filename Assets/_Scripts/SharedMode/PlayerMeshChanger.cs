@@ -1,25 +1,31 @@
-using UnityEngine;
 using Fusion;
+using UnityEngine;
+using System.Collections.Generic;
 
 public class PlayerMeshChanger : NetworkBehaviour
 {
     public SkinnedMeshRenderer skinnedMeshRenderer;
 
-    [Networked, OnChangedRender(nameof(MeshChange))]
-    private int _meshInt{ get; set;}
+    [Networked, OnChangedRender(nameof(MeshChange)),HideInInspector]
+    public int _meshInt{ get; set;}
+    public event System.Action OnMeshChanged;
     public AvatarSelector avatarSelector;
-    public Mesh[] meshes;
-    public Material[] materials;
+    //public Mesh[] meshes;
+    //public Material[] materials;
+    public bool isMale;
+    public List<MeshMaterial> meshMaterialPairs = new List<MeshMaterial>();
     void MeshChange()
     {
-        skinnedMeshRenderer.sharedMesh = meshes[_meshInt];
-        skinnedMeshRenderer.material = materials[_meshInt];
+        skinnedMeshRenderer.sharedMesh = meshMaterialPairs[_meshInt].mesh;
+        skinnedMeshRenderer.material = meshMaterialPairs[_meshInt].material;
+
+        OnMeshChanged?.Invoke();
     }
     public override void Spawned()
     {
         //_meshInt = avatarSelector.SelectedAvatar;
-        skinnedMeshRenderer.sharedMesh = meshes[_meshInt];
-        skinnedMeshRenderer.material = materials[_meshInt];
+        skinnedMeshRenderer.sharedMesh = meshMaterialPairs[_meshInt].mesh;
+        skinnedMeshRenderer.material = meshMaterialPairs[_meshInt].material;
         avatarSelector = FindFirstObjectByType<Canvas>().GetComponent<AvatarSelector>();
         if(HasStateAuthority)
         {
@@ -31,3 +37,12 @@ public class PlayerMeshChanger : NetworkBehaviour
         _meshInt = avatarSelector.SelectedAvatar;
     }
 }
+
+[System.Serializable]
+public class MeshMaterial
+{
+    public Mesh mesh;       // Mesh reference
+    public Material material; // Material reference
+    public Gender gender;
+}
+public enum Gender{ male,female}

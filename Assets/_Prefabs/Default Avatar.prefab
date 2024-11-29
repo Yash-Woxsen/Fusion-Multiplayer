@@ -337,7 +337,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316039288044848629}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 43ac28ddbb2543f418718dfa76582e65, type: 3}
+  m_Avatar: {fileID: 9000000, guid: e1847e682643f5f429a023007895eb2d, type: 3}
   m_Controller: {fileID: 9100000, guid: bea63b6083163f247878bb28fe8da8be, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -363,6 +363,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5925484393758623967}
+  avatarM: {fileID: 9000000, guid: 43ac28ddbb2543f418718dfa76582e65, type: 3}
+  avatarF: {fileID: 9000000, guid: e1847e682643f5f429a023007895eb2d, type: 3}
   moveSpeedDebug: 0
   _controller: {fileID: 2253317808305043047}
 --- !u!114 &1237400610517967214
@@ -378,17 +380,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinnedMeshRenderer: {fileID: 7906844576323268240}
+  __meshInt: 0
   avatarSelector: {fileID: 0}
-  meshes:
-  - {fileID: 5857436389607498443, guid: cf6da3e245d097343a1742732cff297b, type: 3}
-  - {fileID: 5857436389607498443, guid: 39c3dbf76fe90d34d82911db156b4d1f, type: 3}
-  - {fileID: 5857436389607498443, guid: ce129a3f2aeabbf4f97b7eb6965453a1, type: 3}
-  - {fileID: 5857436389607498443, guid: 50d81a646ac7bbc4391853f3de8ad091, type: 3}
-  materials:
-  - {fileID: -2110216206232194035, guid: cf6da3e245d097343a1742732cff297b, type: 3}
-  - {fileID: -2110216206232194035, guid: 39c3dbf76fe90d34d82911db156b4d1f, type: 3}
-  - {fileID: -2110216206232194035, guid: ce129a3f2aeabbf4f97b7eb6965453a1, type: 3}
-  - {fileID: -2110216206232194035, guid: 50d81a646ac7bbc4391853f3de8ad091, type: 3}
+  isMale: 0
+  meshMaterialPairs:
+  - mesh: {fileID: 5857436389607498443, guid: cf6da3e245d097343a1742732cff297b, type: 3}
+    material: {fileID: -2110216206232194035, guid: cf6da3e245d097343a1742732cff297b, type: 3}
+    gender: 1
+  - mesh: {fileID: 5857436389607498443, guid: 39c3dbf76fe90d34d82911db156b4d1f, type: 3}
+    material: {fileID: -2110216206232194035, guid: 39c3dbf76fe90d34d82911db156b4d1f, type: 3}
+    gender: 1
+  - mesh: {fileID: 5857436389607498443, guid: ce129a3f2aeabbf4f97b7eb6965453a1, type: 3}
+    material: {fileID: -2110216206232194035, guid: ce129a3f2aeabbf4f97b7eb6965453a1, type: 3}
+    gender: 0
+  - mesh: {fileID: 5857436389607498443, guid: 50d81a646ac7bbc4391853f3de8ad091, type: 3}
+    material: {fileID: -2110216206232194035, guid: 50d81a646ac7bbc4391853f3de8ad091, type: 3}
+    gender: 0
 --- !u!114 &1795097834726733531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,6 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   green: {fileID: 0}
   rotationSpeed: 10
+  moveSpeed: 10
   controller: {fileID: 2253317808305043047}
 --- !u!1 &1488476990689443671
 GameObject:
