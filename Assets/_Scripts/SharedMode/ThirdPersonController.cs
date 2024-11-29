@@ -11,6 +11,7 @@ public class ThirdPersonController : NetworkBehaviour
     }
     public Transform green;
     public float rotationSpeed = 10f; // 
+    public float moveSpeed = 10f;
     public CharacterController controller;
     public override void Spawned()
     {
@@ -36,9 +37,9 @@ public class ThirdPersonController : NetworkBehaviour
             // Create a rotation that faces the move direction
             Quaternion targetRotation = Quaternion.LookRotation(move);
             // Rotate towards the target direction
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.fixedDeltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Runner.DeltaTime * rotationSpeed);
         }
 
-        controller.Move(move * Time.fixedDeltaTime);
+        controller.Move(move * Runner.DeltaTime * moveSpeed);
     }
 }
