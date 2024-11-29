@@ -234,11 +234,11 @@ GameObject:
   - component: {fileID: 908921633519431587}
   - component: {fileID: 2253317808305043047}
   - component: {fileID: 5761940307647496836}
-  - component: {fileID: 3638995812163756304}
   - component: {fileID: 5925484393758623967}
   - component: {fileID: 4677937802669503327}
   - component: {fileID: 1237400610517967214}
   - component: {fileID: 1795097834726733531}
+  - component: {fileID: 6566746541203078899}
   m_Layer: 0
   m_Name: Default Avatar
   m_TagString: Untagged
@@ -283,10 +283,10 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 5761940307647496836}
-  - {fileID: 3638995812163756304}
   - {fileID: 4677937802669503327}
   - {fileID: 1237400610517967214}
   - {fileID: 1795097834726733531}
+  - {fileID: 6566746541203078899}
 --- !u!143 &2253317808305043047
 CharacterController:
   m_ObjectHideFlags: 0
@@ -328,21 +328,6 @@ MonoBehaviour:
   SyncParent: 0
   _autoAOIOverride: 1
   DisableSharedModeInterpolation: 0
---- !u!114 &3638995812163756304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316039288044848629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecdf292530dc4564a9be22c9ae99af01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerSpeed: 2
-  JumpForce: 5
-  GravityValue: -9.81
 --- !u!95 &5925484393758623967
 Animator:
   serializedVersion: 7
@@ -418,6 +403,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPivot: {fileID: 5672091707319136832}
   cameraHandle: {fileID: 6976895126089177728}
+--- !u!114 &6566746541203078899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316039288044848629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cbc512da5f5ee945a8efbe285f6a641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  green: {fileID: 0}
+  rotationSpeed: 10
+  controller: {fileID: 2253317808305043047}
 --- !u!1 &1488476990689443671
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,7 +625,7 @@ GameObject:
   m_Layer: 0
   m_Name: CameraHandle
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1201,7 +1201,7 @@ GameObject:
   m_Layer: 0
   m_Name: CameraPivot
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

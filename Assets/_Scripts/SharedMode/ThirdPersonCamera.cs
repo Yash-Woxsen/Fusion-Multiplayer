@@ -10,7 +10,7 @@ public class ThirdPersonCamera : NetworkBehaviour
     void LateUpdate()
     {
         if(HasStateAuthority == false)
-            return;
+            return; 
         
 
         Vector2 lookRotationDelta = new Vector2(-Input.GetAxisRaw("Mouse Y"), Input.GetAxisRaw("Mouse X"));
