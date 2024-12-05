@@ -293,8 +293,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455698a23ea64d1438d545455ecaf6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerDown: {fileID: 0}
-  pointerUp: {fileID: 0}
+  pointerDown: {fileID: 1682863754231866}
+  pointerUp: {fileID: 1979113753530900}
 --- !u!1 &1682863754231866
 GameObject:
   m_ObjectHideFlags: 0
