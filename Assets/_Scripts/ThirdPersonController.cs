@@ -4,9 +4,10 @@ public class ThirdPersonController : NetworkBehaviour
 {
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.H))
+        if (Input.GetMouseButtonDown(1)) 
         {
-            Cursor.lockState = !Cursor.visible ? CursorLockMode.None : CursorLockMode.Locked;
+            Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked; 
+            Cursor.visible = Cursor.lockState == CursorLockMode.None;
         }
     }
     public Transform green;
