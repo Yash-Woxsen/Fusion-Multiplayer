@@ -235,7 +235,7 @@
             if (this.showCachedVoices)
             {
                 List<RemoteVoiceLink> cachedVoices = this.connection.CachedRemoteVoices;
-                Speaker[] speakers = FindObjectsOfType<Speaker>();
+                Speaker[] speakers = FindObjectsByType<Speaker>(FindObjectsSortMode.None);
                 for (int i = 0; i < cachedVoices.Count; i++)
                 {
                     //VoiceInfo info = cachedVoices[i].Info;
