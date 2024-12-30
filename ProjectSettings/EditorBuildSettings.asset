@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/MultiPlayer Test.unity
+    path: Assets/_Scenes/GCC Classroom/GCC Classroom.unity
     guid: a0b86c87e51473749b845c756755c864
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: b9f6ecf07fc830344ad527102d431f76, type: 2}
