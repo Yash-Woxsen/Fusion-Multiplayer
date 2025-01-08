@@ -53,6 +53,7 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 2132928725}
+  ForceRemoteRenderTimeframe: 0
 --- !u!114 &2132928725
 MonoBehaviour:
   m_ObjectHideFlags: 0
