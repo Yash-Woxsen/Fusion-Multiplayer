@@ -1,17 +1,20 @@
 using UnityEngine;
 
-public class AvatarSelectiorEnabler : MonoBehaviour
+namespace GCC.UI
 {
-    public SessionData sessionData;
-    public GameObject avatarSelectionPanel;
-    public GameObject loadingScreen;
-    void Start()
+    public class AvatarSelectiorEnabler : MonoBehaviour
     {
-        sessionData.isConnectedAndReadyEvent += EnableAvatarSelection;
-    }
-    void EnableAvatarSelection()
-    {
-        loadingScreen.SetActive(false);
-        avatarSelectionPanel.SetActive(true);
+        public SessionData sessionData;
+        public GameObject avatarSelectionPanel;
+        public GameObject loadingScreen;
+        void Start()
+        {
+            sessionData.isConnectedAndReadyEvent += EnableAvatarSelection;
+        }
+        void EnableAvatarSelection()
+        {
+            loadingScreen.SetActive(false);
+            avatarSelectionPanel.SetActive(true);
+        }
     }
 }

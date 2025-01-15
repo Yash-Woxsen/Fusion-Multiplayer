@@ -5261,6 +5261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fusionBootstrap: {fileID: 382857951}
+  sessionData: {fileID: 11400000, guid: 769b2d0730ada5249962c254dd2b9284, type: 2}
   avatarPanel: {fileID: 305039108}
 --- !u!114 &2000499581
 MonoBehaviour:

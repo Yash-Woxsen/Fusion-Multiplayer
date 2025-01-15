@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Fusion-Multiplayer.sln"
+    "dotnet.defaultSolution": "Global Citizen Classroom.sln"
 }

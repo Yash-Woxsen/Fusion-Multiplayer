@@ -1,5 +1,6 @@
 using Fusion;
 using UnityEngine;
+using GCC.UI;
 
 public class AnimationController : NetworkBehaviour
 {
