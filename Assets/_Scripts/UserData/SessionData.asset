@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e8ab35bfe787a4db14fb6e531283df, type: 3}
   m_Name: SessionData
   m_EditorClassIdentifier: 
-  isConnectedAndReady: 0
+  userName: 
+  serverCode: 
